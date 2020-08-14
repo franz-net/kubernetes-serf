@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: serf
-        image: franzenet/serf:v0.1
+        image: franzenet/serf:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 7946

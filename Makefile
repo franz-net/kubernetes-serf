@@ -1,13 +1,13 @@
-VERSION      ?= v0.1
+VERSION      ?= latest
 IMAGE_REPO   ?= franzenet/serf
-SERF_VERSION ?= 0.6.4
+SERF_VERSION ?= 0.8.2
 
 .PHONY: all prep clean build tag push clean
 all: clean prep build tag push
 	echo "Done! ${IMAGE_REPO}:${VERSION}"
 
 prep:
-	unzip -d . upstream/0.6.4_linux_amd64.zip
+	unzip -d . upstream/serf_${SERF_VERSION}_linux_amd64.zip
 
 clean:
 	rm -f serf
