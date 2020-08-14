@@ -6,7 +6,6 @@ metadata:
     role: service
   name: serf
 spec:
-  clusterIp: "None"
   ports:
     - name: "serf-tcp"
       port: 7946

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serf
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: serf
+  template:
+    metadata:
+      labels:
+        app: serf
+    spec:
+      containers:
+      - name: serf
+        image: franzenet/serf:v0.1
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 7946
+        env:
+            - name: SERF_DISCOVERY_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: serfConf
+                  key: discovery_address

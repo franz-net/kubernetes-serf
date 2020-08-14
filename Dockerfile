@@ -1,7 +1,6 @@
 FROM alpine:3.2
-MAINTAINER jason@slack.io
+# Forked from https://github.com/slack/kubernetes-serf
 
-ENV SERF_DISCOVERY_ADDRESS serf.default.svc.cluster.local
 ENV SERF_APPDIR /app
 ENV SERF_CONFDIR /etc/serf
 
@@ -19,4 +18,5 @@ COPY config/serf.json ${SERF_CONFDIR}/serf.json
 
 EXPOSE 7946
 USER serf
+# SERF_DISCOVERY_ADDRESS should be pulled from configMap
 CMD /app/boot agent -config-dir $SERF_CONFDIR -retry-join $SERF_DISCOVERY_ADDRESS

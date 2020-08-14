@@ -1,5 +1,5 @@
 VERSION      ?= latest
-IMAGE_REPO   ?= quay.io/jhansen/serf
+IMAGE_REPO   ?= franzenet/serf
 SERF_VERSION ?= 0.6.4
 
 .PHONY: all prep clean build tag push clean
@@ -19,4 +19,4 @@ tag:
 	docker tag ${IMAGE_REPO} ${IMAGE_REPO}:${VERSION}
 
 push:
-	docker push quay.io/jhansen/serf:${VERSION}
+	docker push franzenet/serf:${VERSION}

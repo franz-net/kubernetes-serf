@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: serfConf
+data:
+# REPLACE default with the namespace where the deployment will live
+  discovery_address: serf.defaulr.svc.cluster.local
