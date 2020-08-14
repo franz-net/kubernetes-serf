@@ -22,5 +22,5 @@ spec:
             - name: SERF_DISCOVERY_ADDRESS
               valueFrom:
                 configMapKeyRef:
-                  name: serfConf
+                  name: serfconf
                   key: discovery_address

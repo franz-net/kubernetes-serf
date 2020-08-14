@@ -16,4 +16,4 @@ spec:
       targetPort: 7946
       protocol: UDP
   selector:
-    name: "serf"
+      app: serf

@@ -1,4 +1,4 @@
-VERSION      ?= latest
+VERSION      ?= v0.1
 IMAGE_REPO   ?= franzenet/serf
 SERF_VERSION ?= 0.6.4
 
