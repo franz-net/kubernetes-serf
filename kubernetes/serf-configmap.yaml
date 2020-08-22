@@ -4,4 +4,4 @@ metadata:
   name: serfconf
 data:
 # REPLACE default with the namespace where the deployment will live
-  discovery_address: serf.defaulr.svc.cluster.local
+  discovery_address: serf.default.svc.cluster.local
