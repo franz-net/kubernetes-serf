@@ -1,13 +1,17 @@
 # serf in Kubernetes
 
-This repo uses SERF to discover other SERF nodes inside a Kubernetes cluster,
-while most of the functionality for self discovery is in K8 already, certain workloads
-might require to perform some level of self discovery.
-An example would be:
+The purpose of the repo is to serve as an example on how to use SERF to discover nodes inside a Kubernetes cluster and a practical example for:
+* Building Dockerfiles
+* Kubernetes Service
+* Kubernetes Pod
+* Kubernetes Deployment
+* Passing information to Kubernetes resorces using ConfigMaps
+
+An real world example for using SERF in this context would be:
 - Containers in different Pods that must discover each other to configure the container application
 - Specific discover of nodes that match a certain pattern
 
-## Creating the Kubernetes Objects
+## Running the example:
 
 Step 1. Create and verify serf service:
 
